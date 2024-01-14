@@ -1,0 +1,93 @@
+.rightHidden{
+    transform: translateX(110%);
+}
+
+.favMusics{
+    z-index: 999;
+    height: 100%;
+    max-width: 80%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: white;
+    border-left: 3px solid var(--cor-principal);
+    transition: 1s;
+    overflow-y: auto;
+}
+
+.favMusics .favHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 1em;
+    background-color: var(--cor-secundaria);
+    margin-bottom: 1em;
+}
+
+.favMusics .favHeader h2{
+    color: var(--cor-principal);
+}
+
+.favMusics .favHeader button{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.favMusics .favHeader button svg{
+    font-size: 2em;
+    color: var(--cor-principal);
+}
+
+.favMusics .favHeader button svg:hover{
+    color: darkred;
+}
+
+.favMusics .empty{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.favMusics .empty p:first-of-type{
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+/* tracks */
+
+.FavMusics .tracks{
+    padding: 1em;
+    margin: 0.5em;
+
+    background-color: rgb(210,210,210);
+    background-color: var(--cor-3);
+    border-radius: 1em;
+}
+
+
+.FavMusics .tracks p{
+    margin-left: 0.5em;
+    color: white;
+    font-weight: 600;
+}
+
+.FavMusics .tracks audio{
+    margin: 0.5em 0;
+}
+
+.FavMusics .tracks .trackContainer{
+    display: flex;
+    align-items: center;
+}
+
+.FavMusics .tracks .trackContainer svg{
+    margin-left: 0.2em;
+    cursor: pointer;
+    font-size: 2.5em;
+}
+
+.FavMusics .tracks .trackContainer svg:hover{
+    color: red;
+}

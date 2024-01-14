@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+}
+
+body{
+  user-select: none;  /*Bloqueando seleção de texto*/
+}
+
+a{
+  text-decoration: none;
+}
+
+img{
+  user-select: none;
+}
+
+.container{
+  width: 94%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+#root{
+  --cor-principal: #952dab;
+  --cor-secundaria: rgb(245,245,245);
+  --cor-3: #e964b7;
+  
+  --scrollBarCorDeFundo: rgb(210,210,210);
+}
+
+/* ScrollBar Personalizada */
+
+  /* Works on Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--cor-principal) var(--scrollBarCorDeFundo);
+  }
+
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 5px;
+    height: 15px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background-color: var(--scrollBarCorDeFundo);
+    border-radius: 20px;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #952dab;
+    border-radius: 20px;
+  }
+
+  /* MediaQueries */
+
+  @media screen and (max-width: 768px){
+    body{
+      font-size: 12px;
+    }
+
+    /* Header botões */
+    .search button{
+      font-size: 10px;
+    }
+  }
+
+  @media screen and (max-width: 400px){
+    body{
+      font-size: 10px;
+    }
+
+    /* Header botões */
+    .search button{
+      font-size: 8px;
+    }
+  }

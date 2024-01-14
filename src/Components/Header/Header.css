@@ -1,0 +1,102 @@
+.Header{
+    background-color: var(--cor-secundaria);
+}
+
+.Header > .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em 0;
+}
+
+.Header .logo{
+    color: var(--cor-principal);
+}
+
+.headerRight{
+    display: flex;
+    align-items: center;
+}
+
+/* Barra de pesquisa animada */
+
+.search{
+    background-color: var(--cor-principal);
+    border-radius: 100%;
+    padding: 0.5em;
+    margin-right: 1em;
+    display: flex;
+    align-items: center;
+    border-radius: 2em;
+}
+
+.search input{
+    width: 0;
+    border: 0;
+    background: transparent;
+    transition: 0.5s linear;
+    color: white;
+}
+
+.search input:focus{
+    outline: 0;
+}
+
+.search input::placeholder{
+    color: var(--cor-secundaria);
+}
+
+.search button{
+    height: 2.5em;
+    width: 2.5em;
+    background-color: transparent;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    transition: 0.5s linear;
+}
+
+.search button svg{
+    font-size: 1em;
+}
+
+.search:hover > input{
+    display: block;
+    width: 15em;
+    margin-left: 1em;
+}
+
+.search:hover > button{
+    background-color: white;
+}
+
+/**/
+
+.favorites{
+    width: 3em;
+    height: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    background-color: var(--cor-principal);
+    cursor: pointer;
+}
+
+.favorites > svg{
+    font-size: 1em;
+    color: black;
+}
+
+.favorites:hover svg{
+    color: white;
+}
+
+
+@media screen and (max-width: 400px){
+    .search:hover > input{
+        width: 10em;
+    }
+}

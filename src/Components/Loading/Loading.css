@@ -1,0 +1,25 @@
+.Loading .loadingCircle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.Loading .loadingCircle svg{
+    font-size: 2em;
+    color: rgb(110,110,110);
+    animation-name: Animate360;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes Animate360{
+    from{
+        rotate: 360deg;
+    }
+    to{
+        rotate: 0deg;
+    }
+
+
+}

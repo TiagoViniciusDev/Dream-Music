@@ -1,0 +1,30 @@
+.SearchPage > h2{
+    text-align: center;
+    padding: 1em 0;
+    border-bottom: 3px solid var(--cor-principal);
+}
+
+.SearchPage > h2 > span{
+    background-color: var(--cor-3);
+    padding: 0.25em 0.5em;
+    color: white;
+}
+
+.SearchPage .results{
+    margin-top: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.SearchPage .results .album{
+    margin: 0.5em 0;
+}
+
+.SearchPage .album img{
+    width: 15em;
+}
+
+.SearchPage .album p{
+    text-align: center;
+}

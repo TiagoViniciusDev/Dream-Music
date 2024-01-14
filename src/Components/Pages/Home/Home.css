@@ -1,0 +1,22 @@
+.Home .banner{
+    background-image: url('../../../../public/img/banner.jpg');
+    background-size: cover;
+    min-height: 20em;
+    margin-bottom: 1em;
+
+    display: flex;
+    align-items: center;
+}
+
+.Home .banner h1{
+    color: var(--cor-3);
+    font-size: 1.7em;
+}
+
+.Home > .container h2{
+    text-align: center;
+    color:  var(--cor-principal);
+    border-bottom: 3px solid black;
+    padding-bottom: 0.5em;
+}
+

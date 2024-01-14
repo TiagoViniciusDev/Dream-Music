@@ -1,0 +1,94 @@
+.AlbumPage{
+    display: flex;
+    justify-content: space-between;
+    height: 50vh;
+    width: 100%;
+    max-width: 900px !important;
+    padding: 1em 0;
+}
+
+.AlbumPage .albumInfo{
+    text-align: center;
+    height: fit-content;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.AlbumPage .albumInfo img{
+    width: 25em;
+}
+
+.AlbumPage .albumInfo h2{
+    background-color: var(--cor-3);
+    color: white;
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 0.2em;
+    padding: 0.3em 0.5em;
+}
+
+.AlbumPage .tracks{
+    overflow-y: auto;
+    padding-right: 1em;
+}
+
+.AlbumPage .tracks p{
+    margin-left: 0.5em;
+}
+
+.AlbumPage .tracks audio{
+    margin: 0.5em 0;
+}
+
+.AlbumPage .tracks .trackContainer{
+    display: flex;
+    align-items: center;
+}
+
+.AlbumPage .tracks .trackContainer svg{
+    margin-left: 0.5em;
+    color: rgb(230,230,230);
+    cursor: pointer;
+    font-size: 1.5em;
+}
+
+.AlbumPage .tracks .trackContainer svg:hover{
+    color: var(--cor-principal);
+}
+
+/*Elemento de Loading*/
+
+.AlbumPage .Loading .loadingCircle{
+    min-width: 40%;
+    text-align: center;
+}
+
+/* MediaQuerie */
+
+@media screen and (max-width: 850px){
+    .AlbumPage{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .AlbumPage .albumInfo{
+        position: static;
+        transform: translate(0,0);
+        margin-bottom: 2em;
+        padding-bottom: 1em;
+        border-bottom: 3px solid var(--cor-principal);
+    }
+
+    .AlbumPage .albumInfo img{
+        width: 15em;
+    }
+
+    /*Elemento de Loading*/
+
+    .AlbumPage .Loading .loadingCircle{
+        top: initial;
+        transform: translateX(-50%);
+        margin-top: 5em;
+    }
+  }
