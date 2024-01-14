@@ -19,10 +19,10 @@ function App() {
     <div className='App'>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Layout />}>
-            <Route path='/' index element={<Home />}/>
-            <Route path={`/${albumData.title}`} element={<AlbumPage />}/>
-            <Route path={`/${searchText}`} element={<SearchPage />}/>
+          <Route path='/Dream-Music' element={<Layout />}>
+            <Route index element={<Home />}/>
+            <Route path={`/Dream-Music/${albumData.title}`} element={<AlbumPage />}/>
+            <Route path={`/Dream-Music/${searchText}`} element={<SearchPage />}/>
           </Route>
         </Routes>
       </BrowserRouter>
