@@ -20,7 +20,7 @@ export const DreamMusicProvider = ({children}) => {
 
     //FavMusics
     const [favHidden, setFavHidden] = useState(true)
-    const [favMusics, setFavMusics] = useState([])
+    const [favMusics, setFavMusics] = useState(null)
 
     //Pegando dados armazenados previamente no localStorage
     useEffect(() => {

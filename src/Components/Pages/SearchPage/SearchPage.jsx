@@ -45,7 +45,7 @@ function SearchPage() {
         <div className='results'>
           {searchPageData !== undefined ? 
                 searchPageData.map((album) => (
-                    <Link to={`/${album.title}`} key={album.id} className="album" onClick={() => sendAlbumData(album)}>
+                    <Link to={`/Dream-Music/${album.title}`} key={album.id} className="album" onClick={() => sendAlbumData(album)}>
                         <img src={album.album.cover_big} />
                         <p>{album.title.substring(0,30)}</p>
                     </Link>

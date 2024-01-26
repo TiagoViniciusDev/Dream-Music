@@ -74,7 +74,7 @@ function AlbumsContainer({searchAlbum}){
           <div className='slide' id='ALBUN-SLIDE' ref={slide}>
             {homeData !== undefined ? 
               homeData.map((album) => (
-                  <Link to={`/${album.title}`} key={album.id} className="album" onClick={() => sendAlbumData(album)}>
+                  <Link to={`/Dream-Music/${album.title}`} key={album.id} className="album" onClick={() => sendAlbumData(album)}>
                       <img src={album.album.cover_big} />
                       <p>{album.title}</p>
                   </Link>

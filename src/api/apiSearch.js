@@ -1,7 +1,7 @@
 import axios from "axios"
 
 const apiSearch = axios.create({
-    baseURL: 'https://api.deezer.com/search?q='
+    baseURL: 'https://corsproxy.io/?https://api.deezer.com/search?q='
 })
 
 

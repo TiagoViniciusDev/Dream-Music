@@ -32,25 +32,49 @@ function AlbumPage() {
 
       function addToFav(track,e){
         e.target.style.color = "#952dab"
-        var newTracks = [...favMusics,
+        var newTracks
+
+        if(favMusics == null){
+            console.log("first")
+            newTracks = [
                 {
                   id: track.id,
                   title: track.title.substring(0,35),
                   preview: track.preview
                 }
-        ]
+            ]
 
-        //Removendo qualquer objeto repetido
-        newTracks = newTracks.filter(function (a) {
-            return !this[JSON.stringify(a)] && (this[JSON.stringify(a)] = true);
-        }, Object.create(null))
+            //Removendo qualquer objeto repetido
+            newTracks = newTracks.filter(function (a) {
+                return !this[JSON.stringify(a)] && (this[JSON.stringify(a)] = true);
+            }, Object.create(null))
 
-        setFavMusics(newTracks)
+            setFavMusics(newTracks)
 
-        //LocalStorage
-        localStorage.clear(); //Limpando todo o localStorage
-        localStorage.setItem('favData', JSON.stringify(newTracks)) //Armazenando array de objetos no localStorage
+            //LocalStorage
+            localStorage.clear(); //Limpando todo o localStorage
+            localStorage.setItem('favData', JSON.stringify(newTracks)) //Armazenando array de objetos no localStorage
 
+        } else{
+            newTracks = [...favMusics,
+                {
+                  id: track.id,
+                  title: track.title.substring(0,35),
+                  preview: track.preview
+                }
+            ]
+
+            //Removendo qualquer objeto repetido
+            newTracks = newTracks.filter(function (a) {
+                return !this[JSON.stringify(a)] && (this[JSON.stringify(a)] = true);
+            }, Object.create(null))
+
+            setFavMusics(newTracks)
+
+            //LocalStorage
+            localStorage.clear(); //Limpando todo o localStorage
+            localStorage.setItem('favData', JSON.stringify(newTracks)) //Armazenando array de objetos no localStorage
+        }
       }
 
   return (
@@ -62,7 +86,7 @@ function AlbumPage() {
         <div className='tracks'>
             {albumtracks !== undefined ?
                 albumtracks.map((track) => (
-                <div key={track.id}>
+                <div className='audioContainer' key={track.id}>
                     <p>{track.title.substring(0,35)}</p>
                     <div className='trackContainer'>
                         <audio controls>

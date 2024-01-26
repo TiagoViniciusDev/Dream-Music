@@ -26,13 +26,13 @@ function Header() {
   function submitSearch(e){
     e.preventDefault()
     setSearchText(formText)
-    navigate(`/${formText}`)
+    navigate(`/Dream-Music/${formText}`)
   }
 
   return (
     <div className="Header" id='HEADER'>
         <div className="container">
-            <Link to="/" className='logo'>
+            <Link to="/Dream-Music" className='logo'>
                 <h2>Dream Music</h2>
             </Link>
             <div className='headerRight'>

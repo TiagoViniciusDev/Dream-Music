@@ -16,6 +16,10 @@ function FavMusics() {
         return e.id !== removeID
     })
     setFavMusics(newFavMusics)
+
+    //LocalStorage
+    localStorage.clear(); //Limpando todo o localStorage
+    localStorage.setItem('favData', JSON.stringify(newFavMusics)) //Armazenando array de objetos no localStorage
   }
 
   return (
@@ -27,7 +31,7 @@ function FavMusics() {
                     <FaWindowClose />
                 </button>
             </div>
-            {favMusics.length !== 0 ? 
+            {favMusics ? favMusics.length !== 0 ? 
                 favMusics.map((track) => (
                 <div className='tracks container' key={track.id}>
                     <p>{track.title}</p>
@@ -46,7 +50,7 @@ function FavMusics() {
                     <p>Você não possui nenhuma música adicionada</p>
                     <p>Para adicionar uma música aos favoritos clique no icone de coração ao lado da mesma</p>
                 </div>
-            )}
+            ): ""}
         </div>
     </div>
   )
