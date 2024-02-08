@@ -37,7 +37,6 @@ img{
 
   /* Works on Firefox */
   * {
-    scrollbar-width: thin;
     scrollbar-color: var(--cor-principal) var(--scrollBarCorDeFundo);
   }
 
